@@ -14,14 +14,12 @@ public class Average implements Operation {
         if (args.size() != 2) {
             throw new WrongNumOfParams("AVG");
         }
-
-        int x = 0;
+        int x;
         try {
             x = Integer.parseInt(args.get(1));
         } catch (NumberFormatException e) {
             throw new WrongArg("AVG");
         }
-
         if (ctx.size()<x) {
             throw new NotEnoughValuesInStack("AVG");
         }
