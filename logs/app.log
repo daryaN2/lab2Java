@@ -1,20 +1,11 @@
-2022-05-08 18:48:49,551 [main] INFO  Main - Program started.
-2022-05-08 18:48:49,556 [main] INFO  Calculator - Calculator is creating
-2022-05-08 18:48:49,556 [main] INFO  CommandParser - Parsing commands
-2022-05-08 18:48:55,865 [main] INFO  Factory.OperationFactory - Operation factory initialized successfully
-2022-05-08 18:48:55,865 [main] INFO  Factory.OperationFactory - Operation factory instance created
-2022-05-08 18:48:55,866 [main] INFO  Operations.Define - Operation DEFINE done
-2022-05-08 18:48:55,866 [main] INFO  Operations.Push - Operation PUSH done
-2022-05-08 18:48:55,866 [main] INFO  Operations.Push - Operation PUSH done
-2022-05-08 18:48:55,867 [main] INFO  Operations.Comment - Operation # done
-2022-05-08 18:48:55,867 [main] INFO  Operations.Plus - Operation + done
-2022-05-08 18:48:55,868 [main] INFO  Operations.Module - Operation ABS done
-2022-05-08 18:48:55,869 [main] INFO  Operations.Print - Operation PRINT done
-2022-05-08 18:48:55,869 [main] INFO  Operations.Define - Operation DEFINE done
-2022-05-08 18:48:55,869 [main] INFO  Operations.Push - Operation PUSH done
-2022-05-08 18:48:55,869 [main] INFO  Operations.Push - Operation PUSH done
-2022-05-08 18:48:55,869 [main] INFO  Operations.Push - Operation PUSH done
-2022-05-08 18:48:55,869 [main] INFO  Operations.Push - Operation PUSH done
-2022-05-08 18:48:55,869 [main] INFO  Operations.Average - Operation AVG done
-2022-05-08 18:48:55,869 [main] INFO  Operations.Print - Operation PRINT done
-2022-05-08 18:48:55,871 [main] INFO  Operations.Save - Operation SAVE done
+2022-05-08 20:49:06,025 [main] INFO  main.java.Main - Program started.
+2022-05-08 20:49:06,030 [main] INFO  main.java.Calculator - Calculator is creating
+2022-05-08 20:49:06,030 [main] INFO  main.java.CommandParser - Parsing commands
+2022-05-08 20:49:08,218 [main] INFO  main.java.Factory.OperationFactory - Operation factory initialized successfully
+2022-05-08 20:49:08,218 [main] INFO  main.java.Factory.OperationFactory - Operation factory instance created
+2022-05-08 20:49:08,218 [main] ERROR main.java.Factory.OperationFactory - Operation 'htfhfg' not supported
+2022-05-08 20:49:08,219 [main] ERROR main.java.Calculator - Error 
+main.java.Errors.OperationNotSupported: Operation 'htfhfg' not supported
+	at main.java.Factory.OperationFactory.getOperation(OperationFactory.java:44) ~[lab2/:?]
+	at main.java.Calculator.calculate(Calculator.java:23) ~[lab2/:?]
+	at main.java.Main.main(Main.java:20) ~[lab2/:?]
