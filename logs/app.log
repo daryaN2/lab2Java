@@ -1,0 +1,6 @@
+2022-05-08 16:06:32,525 [main] DEBUG Main - Hello from Log4j 2
+2022-05-08 16:06:32,528 [main] DEBUG Main - This is a Debug Message!
+2022-05-08 16:06:32,528 [main] INFO  Main - This is an Info Message!
+2022-05-08 16:06:32,528 [main] ERROR Main - And here comes the Error Message!
+java.lang.RuntimeException: RunRunRun
+	at Main.main(Main.java:12) ~[lab2/:?]
