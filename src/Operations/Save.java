@@ -2,6 +2,8 @@ package Operations;
 
 import Errors.FileNotLoaded;
 import Errors.WrongNumOfParams;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;
@@ -10,9 +12,11 @@ import java.io.PrintWriter;
 import java.util.List;
 
 public class Save implements Operation {
+    private static final Logger logger = LogManager.getLogger(Save.class);
     @Override
     public void execute(Context ctx, List<String> args) throws WrongNumOfParams, FileNotLoaded {
         if (args.size() != 2) {
+            logger.error(new WrongNumOfParams("SAVE"));
             throw new WrongNumOfParams("SAVE");
         }
         PrintWriter writer = null;
@@ -23,12 +27,14 @@ public class Save implements Operation {
                 writer.println(ctx.pop());
             }
         } catch (IOException e) {
-            throw new FileNotLoaded("for saving");
+            logger.error(new FileNotLoaded("SAVE"));
+            throw new FileNotLoaded("SAVE");
         }
         finally {
             if (null != writer) {
                 writer.close();
             }
         }
+        logger.info("Operation SAVE done");
     }
 }

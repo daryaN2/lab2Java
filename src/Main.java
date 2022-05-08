@@ -6,10 +6,7 @@ import java.io.*;
 public class Main {
     private static final Logger logger = LogManager.getLogger(Main.class);
     public static void main (String[] args) {
-        logger.debug("Hello from Log4j 2");
-        logger.debug("This is a Debug Message!");
-        logger.info("This is an Info Message!");
-        logger.error("And here comes the Error Message!", new RuntimeException("RunRunRun"));
+        logger.info("Program started.");
         try {
             BufferedReader reader;
             if (args.length == 1) {
@@ -20,6 +17,7 @@ public class Main {
             Calculator calculator = new Calculator();
             calculator.calculate(reader);
         } catch (FileNotFoundException e) {
+            logger.error("Cannot open file", e);
             e.printStackTrace();
         }
 

@@ -3,24 +3,27 @@ package Operations;
 import Errors.NotEnoughValuesInStack;
 import Errors.WrongArg;
 import Errors.WrongNumOfParams;
-
-import java.io.FileInputStream;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import java.util.List;
-import java.util.Scanner;
 
 public class Average implements Operation {
+    private static final Logger logger = LogManager.getLogger(Average.class);
     @Override
     public void execute(Context ctx, List<String> args) throws WrongNumOfParams, NotEnoughValuesInStack, WrongArg {
         if (args.size() != 2) {
+            logger.error(new WrongNumOfParams("AVG"));
             throw new WrongNumOfParams("AVG");
         }
         int x;
         try {
             x = Integer.parseInt(args.get(1));
         } catch (NumberFormatException e) {
+            logger.error(new WrongArg("AVG"));
             throw new WrongArg("AVG");
         }
         if (ctx.size()<x) {
+            logger.error(new NotEnoughValuesInStack("AVG"));
             throw new NotEnoughValuesInStack("AVG");
         }
         double sum = 0;
@@ -28,6 +31,6 @@ public class Average implements Operation {
             sum += ctx.pop();
         }
         ctx.push(sum/x);
-
+        logger.info("Operation AVG done");
     }
 }
