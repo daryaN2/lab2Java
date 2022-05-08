@@ -1,26 +1,29 @@
-package main.java.Operations;
+package Operations;
+
+import main.java.Operations.Context;
+import main.java.Operations.Plus;
 
 import java.util.ArrayList;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class MinusTest {
+class PlusTest {
     @org.junit.jupiter.api.Test
-    void twoMinus3Minus100Point25EqualsMinus101Point25() {
+    void twoPlus3Plus10Equals15() {
         var context = new Context();
-        var minus = new Minus();
+        var plus = new Plus();
         var args = new ArrayList<String>();
         context.push(2.0);
         context.push(3.0);
+        context.push(10.0);
         assertDoesNotThrow( () -> {
-            minus.execute(context,args);
+            plus.execute(context,args);
         });
-        context.push(100.25);
         assertDoesNotThrow( () -> {
-            minus.execute(context,args);
+            plus.execute(context,args);
         });
         assertDoesNotThrow(() -> {
-            assertEquals(-101.25,context.pop());
+            assertEquals(15,context.pop());
         });
     }
 

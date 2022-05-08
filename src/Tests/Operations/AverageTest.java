@@ -1,4 +1,7 @@
-package main.java.Operations;
+package Operations;
+
+import main.java.Operations.Average;
+import main.java.Operations.Context;
 
 import java.util.ArrayList;
 

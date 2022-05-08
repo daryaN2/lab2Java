@@ -1,5 +1,7 @@
-package main.java.Operations;
+package Operations;
 
+import main.java.Operations.Context;
+import main.java.Operations.Module;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
