@@ -5,8 +5,6 @@ import Errors.OperationNotSupported;
 import Errors.UnableToCreateOperation;
 import Operations.Operation;
 
-import java.io.IOException;
-import java.io.InputStream;
 import java.util.Properties;
 
 public class OperationFactory {
